@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: airflow
+    env: docker
+    plan: free
+    envVars:
+      - key: AIRFLOW__CORE__EXECUTOR
+        value: SequentialExecutor
+      - key: AIRFLOW__DATABASE__SQL_ALCHEMY_CONN
+        value: postgresql+psycopg2://<username>:<password>@<host>:5432/<dbname>

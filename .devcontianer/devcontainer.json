@@ -1,0 +1,8 @@
+{
+  "name": "Airflow Codespace",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "forwardPorts": [8080],
+  "postCreateCommand": "docker-compose up -d"
+}
